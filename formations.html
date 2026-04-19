@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Formations</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0d0f14; --surface: #13161e; --border: #1e2230;
+      --accent: #c8f135; --accent2: #3af0c8; --text: #e8eaf0; --muted: #5a6070;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--bg); color: var(--text);
+      min-height: 100vh; padding: 48px 56px;
+      animation: fadeIn 0.4s ease;
+    }
+    @keyframes fadeIn { from { opacity:0; transform:translateY(10px); } to { opacity:1; transform:translateY(0); } }
+
+    .label { font-size: 9px; letter-spacing: 3px; text-transform: uppercase; color: var(--accent); margin-bottom: 8px; }
+    h1 { font-family: 'Bebas Neue', sans-serif; font-size: 42px; letter-spacing: 1px; margin-bottom: 6px; }
+    .sub { font-size: 13px; color: var(--muted); margin-bottom: 40px; }
+
+    /* ── HIGHLIGHT CARD (Master recommandé) ─── */
+    .highlight {
+      background: linear-gradient(135deg, rgba(200,241,53,0.08), rgba(58,240,200,0.05));
+      border: 1px solid rgba(200,241,53,0.25);
+      border-radius: 14px;
+      padding: 30px 34px;
+      margin-bottom: 28px;
+      display: flex; align-items: flex-start; gap: 24px;
+    }
+    .highlight-icon { font-size: 42px; flex-shrink: 0; }
+    .highlight-badge {
+      display: inline-block; margin-bottom: 8px;
+      font-size: 9px; letter-spacing: 2px; text-transform: uppercase;
+      background: var(--accent); color: var(--bg);
+      border-radius: 4px; padding: 3px 10px; font-weight: 600;
+    }
+    .highlight h2 { font-family: 'Bebas Neue', sans-serif; font-size: 26px; margin-bottom: 10px; letter-spacing: 1px; }
+    .highlight p { font-size: 13.5px; color: #c0c5d0; line-height: 1.7; max-width: 680px; }
+    .highlight ul { list-style: none; padding: 0; margin-top: 12px; display: flex; flex-wrap: wrap; gap: 8px; }
+    .highlight ul li {
+      font-size: 11px; color: var(--accent2);
+      background: rgba(58,240,200,0.08); border: 1px solid rgba(58,240,200,0.2);
+      border-radius: 20px; padding: 4px 12px;
+    }
+
+    /* ── GRID ─── */
+    .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+
+    .card {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 12px; padding: 28px;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+    .card:hover { border-color: var(--accent); transform: translateY(-2px); }
+    .card-icon { font-size: 26px; margin-bottom: 14px; }
+    .card-cat { font-size: 9px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent2); margin-bottom: 6px; }
+    .card h2 { font-family: 'Bebas Neue', sans-serif; font-size: 20px; margin-bottom: 14px; letter-spacing: 0.5px; }
+    .card ul { list-style: none; padding: 0; }
+    .card ul li { font-size: 13px; color: #b0b5c0; line-height: 1.8; padding: 4px 0; border-bottom: 1px solid var(--border); }
+    .card ul li:last-child { border-bottom: none; }
+    .card ul li::before { content: "▸ "; color: var(--accent); }
+    .card p { font-size: 13px; color: #b0b5c0; line-height: 1.7; }
+    .badge {
+      display: inline-block; margin-top: 14px;
+      font-size: 10px; letter-spacing: 1px;
+      background: rgba(200,241,53,0.10); color: var(--accent);
+      border-radius: 4px; padding: 3px 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="label">Poursuite d'études</div>
+  <h1>Formations après la L3 STAPS</h1>
+  <p class="sub">Les différentes voies possibles à l'issue de la licence · Management du sport</p>
+
+  <!-- Voie principale mise en avant -->
+  <div class="highlight">
+    <div class="highlight-icon">⭐</div>
+    <div>
+      <span class="highlight-badge">Voie privilégiée</span>
+      <h2>Master STAPS – Management du sport</h2>
+      <p>
+        La poursuite en <strong>Master Management du sport</strong> est la voie la plus naturelle après une L3 STAPS Management.
+        Elle permet de se spécialiser dans la gestion et le développement d'organisations sportives, la gestion d'événements,
+        ou encore les politiques sportives territoriales. De nombreuses universités proposent ce parcours, dont Paris-Nanterre.
+      </p>
+      <ul>
+        <li>Économie du sport</li>
+        <li>Marketing sportif</li>
+        <li>Gestion de projet</li>
+        <li>Politiques publiques</li>
+        <li>Droit du sport</li>
+        <li>Bac +5 reconnu</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="grid">
+
+    <div class="card">
+      <div class="card-icon">🎓</div>
+      <div class="card-cat">Université</div>
+      <h2>Autres Masters STAPS</h2>
+      <ul>
+        <li>Master Activité physique adaptée & santé (APA)</li>
+        <li>Master Entraînement & optimisation de la performance</li>
+        <li>Master Éducation motricité</li>
+        <li>Master Sciences sociales du sport</li>
+      </ul>
+      <span class="badge">Bac +5</span>
+    </div>
+
+    <div class="card">
+      <div class="card-icon">📋</div>
+      <div class="card-cat">Concours</div>
+      <h2>Concours de la fonction publique</h2>
+      <ul>
+        <li>CAPEPS – Professeur d'EPS</li>
+        <li>Conseiller territorial des APS (CTAPS)</li>
+        <li>Attaché territorial spécialisé sport</li>
+        <li>Fonctionnaire dans une fédération sportive</li>
+      </ul>
+      <span class="badge">Préparation spécifique</span>
+    </div>
+
+    <div class="card">
+      <div class="card-icon">🏟️</div>
+      <div class="card-cat">Écoles spécialisées</div>
+      <h2>Écoles de management du sport</h2>
+      <ul>
+        <li>AMOS Sport Business School</li>
+        <li>ISEFAC Bachelor Sport</li>
+        <li>MBA Sport & Business (ESG, KEDGE…)</li>
+        <li>Formation continue en gestion sportive</li>
+      </ul>
+      <span class="badge">Privé / Alternance</span>
+    </div>
+
+    <div class="card">
+      <div class="card-icon">🌍</div>
+      <div class="card-cat">Autres voies</div>
+      <h2>Formations complémentaires</h2>
+      <ul>
+        <li>Licence pro Gestion & commercialisation des produits sportifs</li>
+        <li>Diplôme de directeur de structure (DESJEPS)</li>
+        <li>Entrepreneuriat dans le secteur sportif</li>
+        <li>Formations à l'international (Erasmus+)</li>
+      </ul>
+      <span class="badge">Diversité</span>
+    </div>
+
+  </div>
+
+</body>
+</html>

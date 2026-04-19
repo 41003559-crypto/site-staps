@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Débouchés</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0d0f14; --surface: #13161e; --border: #1e2230;
+      --accent: #c8f135; --accent2: #3af0c8; --text: #e8eaf0; --muted: #5a6070;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--bg); color: var(--text);
+      min-height: 100vh; padding: 48px 56px;
+      animation: fadeIn 0.4s ease;
+    }
+    @keyframes fadeIn { from { opacity:0; transform:translateY(10px); } to { opacity:1; transform:translateY(0); } }
+
+    .label { font-size: 9px; letter-spacing: 3px; text-transform: uppercase; color: var(--accent); margin-bottom: 8px; }
+    h1 { font-family: 'Bebas Neue', sans-serif; font-size: 42px; letter-spacing: 1px; margin-bottom: 6px; }
+    .sub { font-size: 13px; color: var(--muted); margin-bottom: 36px; }
+
+    /* Vision */
+    .vision {
+      background: linear-gradient(135deg, rgba(200,241,53,0.08), rgba(58,240,200,0.05));
+      border: 1px solid rgba(200,241,53,0.2);
+      border-radius: 12px; padding: 28px 32px; margin-bottom: 32px;
+      position: relative; overflow: hidden;
+    }
+    .vision::before { content: "🎯"; position: absolute; right: 24px; top: 20px; font-size: 48px; opacity: 0.15; }
+    .vision h2 { font-family: 'Bebas Neue', sans-serif; font-size: 20px; color: var(--accent); margin-bottom: 10px; }
+    .vision p { font-size: 14px; color: #c0c5d0; line-height: 1.8; max-width: 720px; }
+
+    /* Étape Master */
+    .master-step {
+      background: var(--surface); border: 1px solid var(--border);
+      border-left: 4px solid var(--accent);
+      border-radius: 12px; padding: 28px 32px; margin-bottom: 28px;
+      display: flex; align-items: flex-start; gap: 20px;
+    }
+    .step-num {
+      font-family: 'Bebas Neue', sans-serif; font-size: 52px;
+      color: var(--accent); line-height: 1; min-width: 52px;
+    }
+    .master-step h3 { font-family: 'Bebas Neue', sans-serif; font-size: 22px; margin-bottom: 8px; }
+    .master-step p { font-size: 13.5px; color: #b0b5c0; line-height: 1.7; }
+    .master-step .tags { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 12px; }
+    .master-step .tag {
+      font-size: 10px; letter-spacing: 1px;
+      background: rgba(200,241,53,0.1); color: var(--accent);
+      border-radius: 4px; padding: 3px 10px;
+    }
+
+    /* Jobs */
+    .jobs { display: flex; flex-direction: column; gap: 16px; margin-bottom: 32px; }
+    .job {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 12px; padding: 24px 28px;
+      display: flex; align-items: flex-start; gap: 24px;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+    .job:hover { border-color: var(--accent2); transform: translateX(4px); }
+    .job-num { font-family: 'Bebas Neue', sans-serif; font-size: 36px; color: rgba(200,241,53,0.2); line-height: 1; min-width: 40px; }
+    .job:hover .job-num { color: var(--accent); }
+    .job-content h3 { font-family: 'Bebas Neue', sans-serif; font-size: 20px; letter-spacing: 0.5px; margin-bottom: 6px; }
+    .job-content p { font-size: 13px; color: #b0b5c0; line-height: 1.7; }
+    .job-tags { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; }
+    .tag-teal {
+      font-size: 10px; letter-spacing: 1px;
+      background: rgba(58,240,200,0.1); color: var(--accent2);
+      border-radius: 4px; padding: 3px 10px;
+    }
+
+    /* Salaires */
+    .salary-section { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 28px; }
+    .salary-section h2 { font-family: 'Bebas Neue', sans-serif; font-size: 20px; margin-bottom: 18px; }
+    .salary-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .salary-card { text-align: center; padding: 18px 10px; background: var(--bg); border-radius: 8px; border: 1px solid var(--border); }
+    .salary-amount { font-family: 'Bebas Neue', sans-serif; font-size: 28px; color: var(--accent); }
+    .salary-role { font-size: 11px; color: var(--muted); margin-top: 4px; line-height: 1.4; }
+    .salary-note { font-size: 10px; color: rgba(90,96,112,0.6); margin-top: 3px; }
+  </style>
+</head>
+<body>
+
+  <div class="label">Projet professionnel</div>
+  <h1>Mes débouchés souhaités</h1>
+  <p class="sub">Les métiers que j'ambitionne d'exercer après mes études</p>
+
+  <div class="vision">
+    <h2>Ma vision</h2>
+    <p>
+      Passionné par l'économie du sport et le développement des organisations sportives, mon objectif est de poursuivre
+      en <strong style="color:var(--accent)">Master Management du sport</strong> afin d'acquérir les compétences nécessaires
+      pour intégrer des structures sportives professionnelles, des collectivités territoriales ou des fédérations sportives.
+      Je souhaite contribuer activement au développement du sport en France, que ce soit par la gestion de clubs,
+      l'organisation d'événements ou l'élaboration de politiques sportives.
+    </p>
+  </div>
+
+  <!-- Étape 1 : Master -->
+  <div class="master-step">
+    <div class="step-num">01</div>
+    <div>
+      <h3>Poursuivre en Master Management du sport</h3>
+      <p>
+        La première étape de mon projet est d'intégrer un <strong style="color:var(--accent2)">Master STAPS Management du sport</strong>
+        (Bac +5), de préférence à l'Université Paris-Nanterre ou dans un établissement partenaire.
+        Ce diplôme me permettra de me spécialiser dans les domaines qui m'intéressent : économie du sport,
+        gestion de projet, marketing sportif et politiques publiques du sport.
+      </p>
+      <div class="tags">
+        <span class="tag">Bac +5</span>
+        <span class="tag">Paris-Nanterre</span>
+        <span class="tag">Alternance possible</span>
+        <span class="tag">2 ans</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Jobs visés -->
+  <div class="jobs">
+
+    <div class="job">
+      <div class="job-num">02</div>
+      <div class="job-content">
+        <h3>Chargé de développement sportif – Club ou fédération</h3>
+        <p>
+          Mon premier débouché visé est de rejoindre un club sportif professionnel ou une fédération nationale
+          en tant que chargé de développement. Ce poste implique la gestion de projets sportifs,
+          le développement des partenariats, la recherche de financements et le suivi administratif des structures.
+        </p>
+        <div class="job-tags">
+          <span class="tag-teal">Fédération</span>
+          <span class="tag-teal">Club pro</span>
+          <span class="tag-teal">Développement</span>
+          <span class="tag-teal">Partenariats</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="job">
+      <div class="job-num">03</div>
+      <div class="job-content">
+        <h3>Chargé de mission sport – Collectivité territoriale</h3>
+        <p>
+          Un autre débouché qui m'attire est le travail au sein d'une collectivité territoriale (mairie, conseil régional)
+          pour concevoir et piloter des politiques sportives locales. Ce poste permet d'avoir un impact direct
+          sur la pratique sportive des citoyens et le développement des équipements sportifs.
+        </p>
+        <div class="job-tags">
+          <span class="tag-teal">Politique sportive</span>
+          <span class="tag-teal">Collectivités</span>
+          <span class="tag-teal">Service public</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="job">
+      <div class="job-num">04</div>
+      <div class="job-content">
+        <h3>Organisateur d'événements sportifs</h3>
+        <p>
+          La gestion et l'organisation d'événements sportifs (compétitions, tournois, événements grand public)
+          est une voie qui correspond à mes compétences en organisation et travail en équipe.
+          Ce métier peut s'exercer en agence événementielle spécialisée sport ou au sein d'une structure sportive.
+        </p>
+        <div class="job-tags">
+          <span class="tag-teal">Événementiel</span>
+          <span class="tag-teal">Logistique</span>
+          <span class="tag-teal">Communication</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="salary-section">
+    <h2>💰 Fourchettes de salaires indicatives</h2>
+    <div class="salary-grid">
+      <div class="salary-card">
+        <div class="salary-amount">2 200€</div>
+        <div class="salary-role">Chargé de développement junior</div>
+        <div class="salary-note">Après Master</div>
+      </div>
+      <div class="salary-card">
+        <div class="salary-amount">2 800€</div>
+        <div class="salary-role">Chargé de mission sport</div>
+        <div class="salary-note">Collectivité territoriale</div>
+      </div>
+      <div class="salary-card">
+        <div class="salary-amount">3 500€</div>
+        <div class="salary-role">Directeur de structure sportive</div>
+        <div class="salary-note">Avec expérience (5+ ans)</div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

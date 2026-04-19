@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Présentation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0d0f14; --surface: #13161e; --border: #1e2230;
+      --accent: #c8f135; --accent2: #3af0c8; --text: #e8eaf0; --muted: #5a6070;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--bg); color: var(--text);
+      min-height: 100vh; padding: 48px 56px;
+      animation: fadeIn 0.4s ease;
+    }
+    @keyframes fadeIn { from { opacity:0; transform:translateY(10px); } to { opacity:1; transform:translateY(0); } }
+
+    .hero { display: flex; align-items: flex-end; gap: 36px; margin-bottom: 52px; }
+    .avatar {
+      width: 96px; height: 96px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Bebas Neue', sans-serif; font-size: 34px;
+      color: #0d0f14; flex-shrink: 0; letter-spacing: 1px;
+    }
+    .hero-text h1 { font-family: 'Bebas Neue', sans-serif; font-size: 52px; line-height: 1; letter-spacing: 2px; }
+    .hero-text p { font-size: 14px; color: var(--muted); margin-top: 6px; }
+    .hero-text .tag {
+      display: inline-block; margin-top: 10px;
+      font-size: 11px; letter-spacing: 2px; text-transform: uppercase;
+      color: var(--accent); border: 1px solid var(--accent);
+      border-radius: 4px; padding: 3px 10px;
+    }
+
+    .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+
+    .card {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 12px; padding: 28px;
+      transition: border-color 0.2s;
+    }
+    .card:hover { border-color: var(--accent); }
+    .card-label { font-size: 9px; letter-spacing: 3px; text-transform: uppercase; color: var(--accent); margin-bottom: 14px; }
+    .card h2 { font-family: 'Bebas Neue', sans-serif; font-size: 22px; margin-bottom: 14px; letter-spacing: 1px; }
+    .card p, .card li { font-size: 13.5px; color: #b0b5c0; line-height: 1.7; }
+    .card ul { list-style: none; padding: 0; }
+    .card ul li::before { content: "→ "; color: var(--accent2); }
+
+    .timeline { display: flex; flex-direction: column; gap: 14px; }
+    .tl-item { display: flex; gap: 14px; align-items: flex-start; }
+    .tl-year { font-family: 'Bebas Neue', sans-serif; font-size: 14px; color: var(--accent); min-width: 42px; padding-top: 2px; }
+    .tl-content { font-size: 13px; color: #b0b5c0; border-left: 2px solid var(--border); padding-left: 14px; line-height: 1.6; }
+    .tl-content strong { display: block; color: var(--text); font-weight: 500; margin-bottom: 2px; }
+
+    .lang-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+    .lang-item { background: var(--bg); border-radius: 8px; padding: 10px 14px; border: 1px solid var(--border); }
+    .lang-name { font-size: 13px; font-weight: 500; color: var(--text); }
+    .lang-level { font-size: 11px; color: var(--accent2); margin-top: 2px; }
+
+    .contact-info { display: flex; flex-direction: column; gap: 10px; }
+    .contact-row { display: flex; align-items: center; gap: 10px; font-size: 13px; color: #b0b5c0; }
+    .contact-icon { font-size: 16px; width: 22px; text-align: center; }
+  </style>
+</head>
+<body>
+
+  <div class="hero">
+    <div class="avatar">EF</div>
+    <div class="hero-text">
+      <h1>Eldjarn Fridriksson</h1>
+      <p>Étudiant en Licence STAPS – Management du sport · Université Paris-Nanterre</p>
+      <span class="tag">L3 STAPS · 2024–2025</span>
+    </div>
+  </div>
+
+  <div class="grid">
+
+    <div class="card">
+      <div class="card-label">Contact</div>
+      <h2>Coordonnées</h2>
+      <div class="contact-info">
+        <div class="contact-row"><span class="contact-icon">📞</span> 06 25 77 05 68</div>
+        <div class="contact-row"><span class="contact-icon">✉️</span> eldjarn@hotmail.fr</div>
+        <div class="contact-row"><span class="contact-icon">📍</span> 44 rue Saint-Blaise, Paris, 75020</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-label">Parcours</div>
+      <h2>Formation</h2>
+      <div class="timeline">
+        <div class="tl-item">
+          <span class="tl-year">2024</span>
+          <div class="tl-content"><strong>L3 STAPS – Management du sport</strong>Université Paris-Nanterre</div>
+        </div>
+        <div class="tl-item">
+          <span class="tl-year">2023</span>
+          <div class="tl-content"><strong>Licence 2 Psychologie</strong>Université Paris-Nanterre</div>
+        </div>
+        <div class="tl-item">
+          <span class="tl-year">2021</span>
+          <div class="tl-content"><strong>Baccalauréat – Option Internationale Britannique</strong>Lycée Maurice Ravel, Paris · Mention AB</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-label">Loisirs</div>
+      <h2>Centres d'intérêt</h2>
+      <ul>
+        <li>Tennis (pratique régulière)</li>
+        <li>Musculation & sports collectifs</li>
+        <li>Économie du sport & développement de clubs</li>
+        <li>Musique : piano & composition assistée par ordinateur</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="card-label">Langues</div>
+      <h2>Compétences linguistiques</h2>
+      <div class="lang-grid">
+        <div class="lang-item"><div class="lang-name">🇫🇷 Français</div><div class="lang-level">Courant</div></div>
+        <div class="lang-item"><div class="lang-name">🇬🇧 Anglais</div><div class="lang-level">Courant</div></div>
+        <div class="lang-item"><div class="lang-name">🇮🇸 Islandais</div><div class="lang-level">C1</div></div>
+        <div class="lang-item"><div class="lang-name">🇪🇸 Espagnol</div><div class="lang-level">B1</div></div>
+      </div>
+    </div>
+
+    <div class="card" style="grid-column: 1 / -1;">
+      <div class="card-label">Projet professionnel</div>
+      <h2>À propos de moi</h2>
+      <p>
+        Étudiant en L3 STAPS Management du sport à l'Université Paris-Nanterre, je souhaite poursuivre en master
+        afin de me spécialiser dans le <strong style="color:var(--accent2)">développement et la gestion des organisations sportives</strong>.
+        Intéressé par l'économie du sport, la gestion de projets et le développement des clubs, mon projet professionnel
+        est de m'orienter vers les métiers du management du sport, notamment dans le développement de structures sportives,
+        la <strong style="color:var(--accent2)">gestion d'événements</strong> ou les <strong style="color:var(--accent2)">politiques sportives territoriales</strong>.
+      </p>
+    </div>
+
+  </div>
+
+</body>
+</html>
